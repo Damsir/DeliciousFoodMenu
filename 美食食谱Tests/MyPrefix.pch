@@ -1,0 +1,128 @@
+//
+//  MyPrefix.pch
+//  美食食谱
+//
+//  Created by qianfeng on 15/11/17.
+//  Copyright (c) 2015年 qianfeng. All rights reserved.
+//
+
+#ifndef _____MyPrefix_pch
+#define _____MyPrefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HIGHT [UIScreen mainScreen].bounds.size.height
+#define HTTP_HOST @"http://10.0.8.8/sns"
+#import "ViewController.h"
+#import "BasicViewController.h"
+#import "BasicTabBarController.h"
+#import "BasicNavigationController.h"
+#import "AFNetworking.h"
+#import "MJExtension.h"
+#import "EnterViewController.h"
+#import "IdentifyViewController.h"
+#import "UIImage+New.h"
+#import "HeadModel.h"
+#import "Scrollmodel.h"
+#import "UIImageView+AFNetworking.h"
+#import "WebViewController.h"
+#import "SyTableViewCell.h"
+#import "CellModel.h"
+#import "MJRefresh.h"
+#import "UIView+ProgressView.h"
+#import "XpCollectionViewCell.h"
+#import "Xpmodel.h"
+#import "goodsListModel.h"
+#import "PpTableViewCell.h"
+#import "Ppmodel.h"
+#import "PpCellModel.h"
+#import "ScrollViewController.h"
+#import "CoverImageView.h"
+#import "ViewController.h"
+#import "SecondViewController.h"
+#import "ScrollDetilModel.h"
+#import "listModel.h"
+#import "XPZFViewController.h"
+#import "PpDetailViewController.h"
+#import "MyPpdetailModel.h"
+#import "PpgoodsListModel.h"
+#import "ShoppingViewController.h"
+#import "DBManager.h"
+
+#import "TCUSViewController.h"
+#import "GetGoodsDirectionViewController.h"
+#import "UMSocial.h"
+#import "SearchViewController.h"
+#import "SearchDetailViewController.h"
+#import "DwViewController.h"
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "AffordViewController.h"
+#import "PersonMessageViewController.h"
+//首页  /发现
+#define HTTP_FIND @"http://api.ujipin.com/v2/app/android/phone/index/index?idx=home&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&page=%d&page_size=20"
+//page 值为1刷新加1
+
+//每日签到一行不要
+//首页  /温暖家居
+#define HTTP_HOME @"http://api.ujipin.com/v2/app/android/phone/category/getMainCatGoods?idx=class_415&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&cid=415"
+
+
+//首页/ 美味餐厨
+
+#define HTTP_FOOD @"http://api.ujipin.com/v2/app/android/phone/category/getMainCatGoods?idx=class_420&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&cid=420"
+
+//首页 /健康美体
+#define HTTP_BOLDY @"http://api.ujipin.com/v2/app/android/phone/category/getMainCatGoods?idx=class_426&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&cid=426"
+
+
+//首页 /宝贝成长
+#define HTTP_CHILD @"http://api.ujipin.com/v2/app/android/phone/category/getMainCatGoods?idx=class_435&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&cid=435"
+
+
+//首页/旅游出行
+#define HTTP_TRAVEAL @"http://api.ujipin.com/v2/app/android/phone/category/getMainCatGoods?idx=class_441&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&cid=441"
+
+
+
+//首页/ 文具数码
+#define HTTP_WJSM @"http://api.ujipin.com/v2/app/android/phone/category/getMainCatGoods?idx=class_444&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&cid=444"
+
+//新品
+#define HTTP_NEW @"http://api.ujipin.com/v2/app/android/phone/list/getNewListData?idx=new&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&page=%d&page_size=20"
+
+//刷新PAGE加1
+//
+//活动/专题
+#define HTTP_ZT @"http://api.ujipin.com/iphone/v1/mobile/index.php?idx=project&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&type=7&id=0&c=index&a=index"
+
+//活动/限时体验
+
+
+#define HTTP_SALE @"http://api.ujipin.com/iphone/v1/mobile/index.php?idx=limit&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&type=8&id=0&c=index&a=index"
+
+
+
+
+//品牌
+#define HTTP_PP @"http://api.ujipin.com/v2/app/android/phone/brand/brandList?idx=brand&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&cid=0&n=0&page=%d&page_size=20"
+
+//PAGE加1
+
+#define LOGOIN_URLSTR @"http://i.liveport.cn//images//data//brandlogo//%@"
+
+//登陆
+//界面/第三方分享
+
+
+#define SCROLL_VI @"http://api.ujipin.com/iphone/v1/mobile/index.php?channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&type=1&id=%@&c=index&a=index"
+#define SY_CELL @"http://api.ujipin.com/iphone/v1/mobile/index.php?channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&c=index&a=index&type=6&is_need_transfer=0&id=%@"
+#define XPZF @"http://api.ujipin.com/v2/app/android/phone/goods/index?idx=goods&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&goods_id=%@"
+
+#define  PpDetailJx @"http://api.ujipin.com/v2/app/android/phone/list/index?idx=brand_%@&channel=baidu&idfa=864399021550364&user_id=0&plantform=aphone&version=236&brand=%@&cid=0&new=0&page=%ld&page_size=20&price_max=0&price_min=0&ss=0&production=0"
+#define  Search @"http://api.ujipin.com/v2/app/android/phone//search/?channel=baidu&idfa=864399021550364&user_id=430636&plantform=aphone&version=236&keywords=%@&cid=0&page=%d&page_size=20&price_max=0&price_min=0&ss=0&production=0"
+#define REGISTER @"http://www.yuntoo.com/api/signup"
+#define LOGIN_VERIFY_INFORMATION @"http://www.yuntoo.com/api/signin"
+#endif
